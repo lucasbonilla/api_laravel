@@ -24,6 +24,7 @@ Route::namespace('Api')->name('api.')->group(function(){
         Route::post('/', 'ScheduleController@store')->name('store_schedule');
         Route::put('/{id}', 'ScheduleController@update')->name('update_schedule');
         Route::delete('/{id}', 'ScheduleController@delete')->name('delete_schedule');
-        Route::get('/search', 'ScheduleController@search')->name('search_schedule');
+        Route::post('/search', 'ScheduleController@search')->name('search_schedule');
     });
+    Route::get('/', 'ScheduleController@main')->name('main');
 });
